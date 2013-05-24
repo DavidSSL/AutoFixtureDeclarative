@@ -19,7 +19,7 @@ namespace Example.UnitTests
             var knownText = "This text is not anonymous";
             fixture.Register<int, string, IMyInterface>((i, s) =>
                 new FakeMyInterface(i, knownText));
-            var sut = fixture.Create<TypesWithoutPublicCtrs>();
+            var sut = fixture.Create<DealingWithTypesWithoutPublicCtrs>();
             // Exercise system
             var result = sut.Echo("test");
             // Verify outcome
@@ -30,7 +30,7 @@ namespace Example.UnitTests
         [Theory, AutoData]
         public void DeclarativeStyleOneOff(
             [Frozen(As = typeof(IMyInterface))]FakeMyInterface dummy
-            , TypesWithoutPublicCtrs sut)
+            , DealingWithTypesWithoutPublicCtrs sut)
         {
             var result = sut.Echo("test");
             result.Should().Be("test");
@@ -38,7 +38,7 @@ namespace Example.UnitTests
 
         [Theory, MyTestConventions]
         public void DeclarativeStyleConvention(
-            TypesWithoutPublicCtrs sut)
+            DealingWithTypesWithoutPublicCtrs sut)
         {
             var result = sut.Echo("test");
             result.Should().Be("test");

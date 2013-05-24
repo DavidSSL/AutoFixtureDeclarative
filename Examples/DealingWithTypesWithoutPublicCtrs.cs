@@ -1,10 +1,10 @@
 ﻿namespace Examples
 {
-    public class TypesWithoutPublicCtrs
+    public class DealingWithTypesWithoutPublicCtrs
     {
         private readonly IMyInterface _mi;
 
-        public TypesWithoutPublicCtrs(IMyInterface mi)
+        public DealingWithTypesWithoutPublicCtrs(IMyInterface mi)
         {
             _mi = mi;
         }
