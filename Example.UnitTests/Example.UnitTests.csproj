@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DealingWithConstrainedInputTests.cs" />
     <Compile Include="MyTestConventions.cs" />
     <Compile Include="MyTestConventionsAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
