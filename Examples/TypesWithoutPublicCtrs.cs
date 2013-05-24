@@ -8,5 +8,10 @@
         {
             _mi = mi;
         }
+
+        public string Echo(string echoStr)
+        {
+            return echoStr;
+        }
     }
 }
