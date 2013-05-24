@@ -1,7 +1,6 @@
 ﻿using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.Kernel;
 using Ploeh.AutoFixture.Xunit;
 using Xunit;
 using Xunit.Extensions;
@@ -16,8 +15,8 @@ namespace Example.UnitTests
         {
             // Fixture setup
             var fixture = new Fixture();
-            var knownText = "This text is not anonymous";
-            fixture.Register<int, string, IMyInterface>((i, s) =>
+            const string knownText = "This text is not anonymous";
+            fixture.Register<int, IMyInterface>((i) =>
                 new FakeMyInterface(i, knownText));
             var sut = fixture.Create<DealingWithTypesWithoutPublicCtrs>();
             // Exercise system
@@ -42,23 +41,6 @@ namespace Example.UnitTests
         {
             var result = sut.Echo("test");
             result.Should().Be("test");
-        }
-    }
-
-    public class MyTestConventionsAttribute : AutoDataAttribute
-    {
-        public MyTestConventionsAttribute() :
-            base(new Fixture().Customize(new MyTestConventions()))
-        {
-        }
-    }
-
-    public class MyTestConventions : ICustomization
-    {
-        public void Customize(IFixture fixture)
-        {
-            fixture.Customizations.Add(
-            new TypeRelay(typeof(IMyInterface), typeof(FakeMyInterface)));
         }
     }
 }

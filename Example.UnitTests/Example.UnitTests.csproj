@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyTestConventions.cs" />
+    <Compile Include="MyTestConventionsAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DealingWithTypesWithoutPublicCtrsTests.cs" />
   </ItemGroup>
