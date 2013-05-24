@@ -12,7 +12,8 @@ namespace Example.UnitTests
         {
             var fixture = new Fixture();
 
-            fixture.Register<IMyInterface>(() => new FakeMyInterface());
+            fixture.Register<int, string, IMyInterface>((i, s) 
+                => new FakeMyInterface(i, "This text is anonymous"));
 
             var sut = fixture.Create<TypesWithoutPublicCtrs>();
         }
