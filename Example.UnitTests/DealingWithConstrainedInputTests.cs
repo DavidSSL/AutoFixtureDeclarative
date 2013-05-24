@@ -1,6 +1,8 @@
 ﻿using Examples;
 using Ploeh.AutoFixture;
+using Ploeh.AutoFixture.Xunit;
 using Xunit;
+using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
@@ -22,6 +24,28 @@ namespace Example.UnitTests
             // Verify outcome
 
             // Fixture teardown
+        }
+
+        [Theory, DanishPhoneNumberConventions]
+        public void DeclarativeStyle(
+            Contact sut)
+        {
+            sut.Echo("Test");
+        }
+    }
+
+    public class DanishPhoneNumberConventionsAttribute : AutoDataAttribute
+    {
+        public DanishPhoneNumberConventionsAttribute()
+            : base(new Fixture().Customize(new DanishPhoneNumberConventions()))
+        {}
+    }
+
+    public class DanishPhoneNumberConventions : ICustomization
+    {
+        public void Customize(IFixture fixture)
+        {
+            fixture.Customize<DanishPhoneNumber>(c => c.FromFactory((int i) => new DanishPhoneNumber(i + DanishPhoneNumber.MinValue)));
         }
     }
 }

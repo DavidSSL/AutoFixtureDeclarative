@@ -10,5 +10,10 @@
             _name = name;
             _phoneNumber = phoneNumber;
         }
+
+        public string Echo(string echoString)
+        {
+            return echoString;
+        }
     }
 }
