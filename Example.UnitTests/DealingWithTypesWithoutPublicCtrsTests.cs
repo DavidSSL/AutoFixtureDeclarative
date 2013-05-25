@@ -1,7 +1,6 @@
 ﻿using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.Xunit;
 using Xunit;
 using Xunit.Extensions;
 
@@ -24,15 +23,6 @@ namespace Example.UnitTests
             // Verify outcome
             result.Should().Be("test");
             // Teardown
-        }
-
-        [Theory, AutoData]
-        public void DeclarativeStyleOneOff(
-            [Frozen(As = typeof(IMyInterface))]FakeMyInterface dummy
-            , DealingWithTypesWithoutPublicCtrs sut)
-        {
-            var result = sut.Echo("test");
-            result.Should().Be("test");
         }
 
         [Theory, MyTestConventions]

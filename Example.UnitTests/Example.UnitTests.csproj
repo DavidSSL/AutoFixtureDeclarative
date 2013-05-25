@@ -54,6 +54,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanishPhoneNumberConventions.cs" />
+    <Compile Include="DanishPhoneNumberConventionsAttribute.cs" />
     <Compile Include="DealingWithConstrainedInputTests.cs" />
     <Compile Include="MyTestConventions.cs" />
     <Compile Include="MyTestConventionsAttribute.cs" />
