@@ -49,8 +49,10 @@
     <Compile Include="DanishPhoneNumber.cs" />
     <Compile Include="FakeMyInterface.cs" />
     <Compile Include="IMyInterface.cs" />
+    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DealingWithTypesWithoutPublicCtrs.cs" />
+    <Compile Include="Thing.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
