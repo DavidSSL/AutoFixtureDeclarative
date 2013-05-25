@@ -13,7 +13,6 @@ namespace Examples
 
             set
             {
-
                 if (value > Max)
                 {
                     throw new ArgumentOutOfRangeException("value");

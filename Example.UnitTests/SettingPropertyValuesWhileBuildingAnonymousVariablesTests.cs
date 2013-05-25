@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;
 using Xunit;
+using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
@@ -21,31 +22,18 @@ namespace Example.UnitTests
                              .Create();
 
             // Exercise system
-            
+
             // Verify outcome
             sut.Max.Should().BeGreaterThan(sut.Min);
             // Fixture teardown
         }
-    }
 
-    public class Filter
-    {
-        private int _min;
-        public int Max { get; set; }
-
-        public int Min
+        [Theory, SetPropertyUsingBuildConventions]
+        public void DeclarativeStyle(
+             Filter sut
+            )
         {
-            get { return _min; }
-
-            set
-            {
-
-                if (value > Max)
-                {
-                    throw new ArgumentOutOfRangeException("value");
-                }
-                _min = value;
-            }
+            sut.Max.Should().BeGreaterThan(sut.Min);
         }
     }
 }

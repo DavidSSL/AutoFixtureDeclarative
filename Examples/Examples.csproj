@@ -48,6 +48,7 @@
     <Compile Include="Contact.cs" />
     <Compile Include="DanishPhoneNumber.cs" />
     <Compile Include="FakeMyInterface.cs" />
+    <Compile Include="Filter.cs" />
     <Compile Include="IMyInterface.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
