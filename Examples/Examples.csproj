@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\packages\FakeItEasy.1.12.0\lib\net40\FakeItEasy.dll</HintPath>
+    </Reference>
     <Reference Include="LiteGuard">
       <HintPath>..\packages\LiteGuard.0.6.0\lib\net35\LiteGuard.dll</HintPath>
     </Reference>
@@ -48,16 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs" />
+    <Compile Include="BasketPresenter.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="DanishPhoneNumber.cs" />
     <Compile Include="FakeMyInterface.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="IMyInterface.cs" />
+    <Compile Include="IPizzaMap.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="MyClassA.cs" />
     <Compile Include="MyClassB.cs" />
     <Compile Include="MyClassC.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DealingWithTypesWithoutPublicCtrs.cs" />
     <Compile Include="Thing.cs" />
