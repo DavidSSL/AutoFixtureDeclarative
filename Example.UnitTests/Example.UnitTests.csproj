@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoFixtureAsFixtureObjectTests.cs" />
+    <Compile Include="BuildingandassigningarrayswithAutoFixtureTests.cs" />
     <Compile Include="DanishPhoneNumberConventions.cs" />
     <Compile Include="DanishPhoneNumberConventionsAttribute.cs" />
     <Compile Include="DealingWithConstrainedInputTests.cs" />
