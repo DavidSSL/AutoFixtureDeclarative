@@ -1,4 +1,5 @@
-﻿using Examples;
+﻿using Example.UnitTests.TestConventions;
+using Examples;
 using Ploeh.AutoFixture;
 using Xunit;
 using Xunit.Extensions;

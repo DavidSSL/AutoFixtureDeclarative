@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Example.UnitTests.TestConventions;
 using Examples;
 using FluentAssertions;
@@ -64,7 +63,7 @@ namespace Example.UnitTests
 
             things.ForEach(t => fake.AddThing(t));
 
-            int expectedSum = things.Select(t => t.Number).Sum();
+            var expectedSum = things.Select(t => t.Number).Sum();
 
             var sut = fixture.Create<MyClass>();
 

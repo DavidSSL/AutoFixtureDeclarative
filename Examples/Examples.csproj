@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiteGuard">
+      <HintPath>..\packages\LiteGuard.0.6.0\lib\net35\LiteGuard.dll</HintPath>
+    </Reference>
     <Reference Include="Ploeh.AutoFixture">
       <HintPath>..\packages\AutoFixture.3.0.9\lib\net40\Ploeh.AutoFixture.dll</HintPath>
     </Reference>
@@ -54,9 +57,13 @@
     <Compile Include="MyClassA.cs" />
     <Compile Include="MyClassB.cs" />
     <Compile Include="MyClassC.cs" />
+    <Compile Include="Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DealingWithTypesWithoutPublicCtrs.cs" />
     <Compile Include="Thing.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

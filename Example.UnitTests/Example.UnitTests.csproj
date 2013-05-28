@@ -55,18 +55,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoFixtureAsFixtureObjectTests.cs" />
+    <Compile Include="AutoFixtureFreezeTests.cs" />
     <Compile Include="BuildingandassigningarrayswithAutoFixtureTests.cs" />
-    <Compile Include="DanishPhoneNumberConventions.cs" />
-    <Compile Include="DanishPhoneNumberConventionsAttribute.cs" />
     <Compile Include="DealingWithConstrainedInputTests.cs" />
     <Compile Include="MyClassFixture.cs" />
-    <Compile Include="MyTestConventions.cs" />
-    <Compile Include="MyTestConventionsAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DealingWithTypesWithoutPublicCtrsTests.cs" />
     <Compile Include="SettingPropertyValuesWhileBuildingAnonymousVariablesTests.cs" />
+    <Compile Include="TestConventions\BuildArrayConventions.cs" />
+    <Compile Include="TestConventions\BuildArrayConventionsAttribute.cs" />
+    <Compile Include="TestConventions\DanishPhoneNumberConventions.cs" />
+    <Compile Include="TestConventions\DanishPhoneNumberConventionsAttribute.cs" />
     <Compile Include="TestConventions\MyFixtureObjectConventions.cs" />
     <Compile Include="TestConventions\MyFixtureObjectConventionsAttribute.cs" />
+    <Compile Include="TestConventions\MyTestConventions.cs" />
+    <Compile Include="TestConventions\MyTestConventionsAttribute.cs" />
     <Compile Include="TestConventions\SetPropertyUsingBuildConvention.cs" />
     <Compile Include="TestConventions\SetPropertyUsingBuildConventionsAttribute.cs" />
   </ItemGroup>

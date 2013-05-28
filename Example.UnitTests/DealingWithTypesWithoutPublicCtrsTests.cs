@@ -1,4 +1,5 @@
-﻿using Examples;
+﻿using Example.UnitTests.TestConventions;
+using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;
 using Xunit;
