@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Example.UnitTests.TestConventions;
 using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;

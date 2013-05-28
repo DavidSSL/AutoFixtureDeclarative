@@ -1,7 +1,7 @@
-﻿using Examples;
+using Examples;
 using Ploeh.AutoFixture;
 
-namespace Example.UnitTests
+namespace Example.UnitTests.TestConventions
 {
     public class SetPropertyUsingBuildConvention : ICustomization
     {

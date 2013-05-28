@@ -1,7 +1,7 @@
-﻿using Ploeh.AutoFixture;
+using Ploeh.AutoFixture;
 using Ploeh.AutoFixture.Xunit;
 
-namespace Example.UnitTests
+namespace Example.UnitTests.TestConventions
 {
     public class SetPropertyUsingBuildConventionsAttribute : AutoDataAttribute
     {

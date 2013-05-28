@@ -1,8 +1,10 @@
 ﻿using System.Linq;
+using Example.UnitTests.TestConventions;
 using Examples;
 using FluentAssertions;
 using Ploeh.AutoFixture;
 using Xunit;
+using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
@@ -14,10 +16,10 @@ namespace Example.UnitTests
         {
             // Fixture setup
             var fixture = new Fixture();
-            var mc = fixture.Create<MyClassA>();
-            mc.Items = fixture.CreateMany<MyClassB>().ToArray();
+            var sut = fixture.Create<MyClassA>();
+            sut.Items = fixture.CreateMany<MyClassB>().ToArray();
             // Exercise system
-            var result = mc.Echo("test");
+            var result = sut.Echo("test");
             // Verify outcome
             result.Should().Be("test");
             // Fixture teardown
@@ -28,11 +30,11 @@ namespace Example.UnitTests
         {
             // Fixture setup
             var fixture = new Fixture();
-            var mc = fixture.Build<MyClassA>()
+            var sut = fixture.Build<MyClassA>()
                             .With(x => x.Items, fixture.CreateMany<MyClassB>().ToArray())
                             .Create();
             // Exercise system
-            var result = mc.Echo("test");
+            var result = sut.Echo("test");
             // Verify outcome
             result.Should().Be("test");
             // Fixture teardown
@@ -48,14 +50,23 @@ namespace Example.UnitTests
                                         ob.With(x => x.Items,
                                                 fixture.CreateMany<MyClassB>().ToArray()));
 
-            var mc = fixture.Create<MyClassA>();
+            var sut = fixture.Create<MyClassA>();
 
             // Exercise system
-            var result = mc.Echo("test");
+            var result = sut.Echo("test");
             // Verify outcome
             result.Should().Be("test");
             // Fixture teardown
         }
 
+        [Theory, BuildArrayConventions]
+        public void DeclarativeStyle(
+            MyClassA sut)
+        {
+            // Exercise system
+            var result = sut.Echo("test");
+            // Verify outcome
+            result.Should().Be("test");
+        }
     }
 }
