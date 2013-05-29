@@ -1,7 +1,7 @@
-﻿using Examples;
+﻿using Example.UnitTests.TestConventions;
+using Examples;
 using Ploeh.AutoFixture;
 using Ploeh.AutoFixture.Kernel;
-using Ploeh.AutoFixture.Xunit;
 using Xunit;
 using Xunit.Extensions;
 
@@ -82,47 +82,6 @@ namespace Example.UnitTests
             Bastard sut)
         {
             Assert.IsAssignableFrom<DummyFoo>(sut.Foo);
-        }
-    }
-
-    internal class ConstructorStrategiesForAllClassesTestConventionsAttribute : AutoDataAttribute
-    {
-        public ConstructorStrategiesForAllClassesTestConventionsAttribute():base(new Fixture().Customize(new ConstructorStrategiesForAllClassesTestConventions()))
-        {
-            
-        }
-    }
-
-    internal class ConstructorStrategiesForAllClassesTestConventions : ICustomization
-    {
-        public void Customize(IFixture fixture)
-        {
-            fixture.Customizations.Add(
-                new MethodInvoker(
-                    new GreedyConstructorQuery()));
-            fixture.Register<IFoo>(
-                fixture.Create<DummyFoo>);
-        }
-    }
-
-    internal class ConstructorStrategiesForBastardClassOnlyTestConventionsAttribute : AutoDataAttribute
-    {
-        public ConstructorStrategiesForBastardClassOnlyTestConventionsAttribute():base(new Fixture().Customize(new ConstructorStrategiesForBastardClassOnlyTestConventions()))
-        {
-            
-        }
-    }
-
-    internal class ConstructorStrategiesForBastardClassOnlyTestConventions : ICustomization
-    {
-        public void Customize(IFixture fixture)
-        {
-            fixture.Customize<Bastard>(c => c.FromFactory(
-                new MethodInvoker(
-                    new GreedyConstructorQuery())));
-
-            fixture.Register<IFoo>(
-                fixture.Create<DummyFoo>);
         }
     }
 }
