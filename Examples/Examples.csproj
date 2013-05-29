@@ -53,10 +53,14 @@
   <ItemGroup>
     <Compile Include="Basket.cs" />
     <Compile Include="BasketPresenter.cs" />
+    <Compile Include="Bastard.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="DanishPhoneNumber.cs" />
+    <Compile Include="DefaultFoo.cs" />
+    <Compile Include="DummyFoo.cs" />
     <Compile Include="FakeMyInterface.cs" />
     <Compile Include="Filter.cs" />
+    <Compile Include="IFoo.cs" />
     <Compile Include="IMyInterface.cs" />
     <Compile Include="IPizzaMap.cs" />
     <Compile Include="MyClass.cs" />

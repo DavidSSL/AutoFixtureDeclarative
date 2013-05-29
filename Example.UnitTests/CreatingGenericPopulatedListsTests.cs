@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Example.UnitTests.TestConventions;
 using FluentAssertions;
 using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.Xunit;
 using Xunit;
 using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
+    // Based upon http://blog.ploeh.dk/2011/02/08/CreatinggeneralpopulatedlistswithAutoFixture
     public class CreatingGenericPopulatedListsTests
     {
         [Fact]
@@ -27,27 +27,11 @@ namespace Example.UnitTests
             // Fixture teardown
         } 
 
-        [Theory, CreatingGenericPopulatedListsTestConventions]
+        [Theory, GenericPopulatedListsTestConventions]
         public void DeclarativeStyle(
             List<int> sut)
         {
             sut.Count.Should().BeGreaterThan(0);
-        }
-    }
-
-    internal class CreatingGenericPopulatedListsTestConventionsAttribute : AutoDataAttribute
-    {
-        public CreatingGenericPopulatedListsTestConventionsAttribute():base(new Fixture().Customize(new GenericPopulatedListsTestConventions()))
-        {
-            
-        }
-    }
-
-    internal class GenericPopulatedListsTestConventions : ICustomization
-    {
-        public void Customize(IFixture fixture)
-        {
-            fixture.Customize(new MultipleCustomization());
         }
     }
 }

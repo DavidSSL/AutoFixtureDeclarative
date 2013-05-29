@@ -68,6 +68,7 @@
     <Compile Include="AutoFixtureAsFixtureObjectTests.cs" />
     <Compile Include="AutoFixtureFreezeTests.cs" />
     <Compile Include="BuildingandassigningarrayswithAutoFixtureTests.cs" />
+    <Compile Include="ConstructorStrategiesTests.cs" />
     <Compile Include="CreatingGenericPopulatedListsTests.cs" />
     <Compile Include="CreatingSpecificPopulatedListsTests.cs" />
     <Compile Include="DealingWithConstrainedInputTests.cs" />
@@ -79,8 +80,10 @@
     <Compile Include="TestConventions\AutoFakeDataAttribute.cs" />
     <Compile Include="TestConventions\BuildArrayConventions.cs" />
     <Compile Include="TestConventions\BuildArrayConventionsAttribute.cs" />
+    <Compile Include="TestConventions\GenericPopulatedListsTestConventionsAttribute.cs" />
     <Compile Include="TestConventions\DanishPhoneNumberConventions.cs" />
     <Compile Include="TestConventions\DanishPhoneNumberConventionsAttribute.cs" />
+    <Compile Include="TestConventions\GenericPopulatedListsTestConventions.cs" />
     <Compile Include="TestConventions\MyFixtureObjectConventions.cs" />
     <Compile Include="TestConventions\MyFixtureObjectConventionsAttribute.cs" />
     <Compile Include="TestConventions\MyTestConventions.cs" />

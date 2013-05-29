@@ -9,6 +9,7 @@ using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
+    // Based upon http://blog.ploeh.dk/2011/02/07/CreatingspecificpopulatedlistswithAutoFixture
     public class CreatingSpecificPopulatedListsTests
     {
         [Fact]

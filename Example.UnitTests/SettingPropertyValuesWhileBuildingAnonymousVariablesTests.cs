@@ -7,6 +7,7 @@ using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
+    // Based upon http://blog.ploeh.dk/2009/06/01/SettingPropertyValuesWhileBuildingAnonymousVariablesWithAutoFixture
     public class SettingPropertyValuesWhileBuildingAnonymousVariablesTests
     {
         [Fact]
