@@ -9,7 +9,8 @@ namespace Example.UnitTests.TestConventions
         {
             const string knownText = "This text is not anonymous";
 
-            fixture.Customize<IMyInterface>(c => c.FromFactory((int i) => new FakeMyInterface(i, knownText)));
+            fixture.Customize<IMyInterface>(
+                c => c.FromFactory((int i) => new FakeMyInterface(i, knownText)));
         }
     }
 }

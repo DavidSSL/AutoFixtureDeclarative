@@ -63,6 +63,7 @@
     <Compile Include="MyClassA.cs" />
     <Compile Include="MyClassB.cs" />
     <Compile Include="MyClassC.cs" />
+    <Compile Include="MyClassWithList.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
