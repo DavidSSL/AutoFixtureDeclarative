@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using Ploeh.AutoFixture;
+using Ploeh.AutoFixture.Xunit;
 using Xunit;
+using Xunit.Extensions;
 
 namespace Example.UnitTests
 {
@@ -23,5 +26,28 @@ namespace Example.UnitTests
             list.Count.Should().BeGreaterThan(0);
             // Fixture teardown
         } 
+
+        [Theory, CreatingGenericPopulatedListsTestConventions]
+        public void DeclarativeStyle(
+            List<int> sut)
+        {
+            sut.Count.Should().BeGreaterThan(0);
+        }
+    }
+
+    internal class CreatingGenericPopulatedListsTestConventionsAttribute : AutoDataAttribute
+    {
+        public CreatingGenericPopulatedListsTestConventionsAttribute():base(new Fixture().Customize(new GenericPopulatedListsTestConventions()))
+        {
+            
+        }
+    }
+
+    internal class GenericPopulatedListsTestConventions : ICustomization
+    {
+        public void Customize(IFixture fixture)
+        {
+            fixture.Customize(new MultipleCustomization());
+        }
     }
 }
