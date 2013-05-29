@@ -68,6 +68,7 @@
     <Compile Include="AutoFixtureAsFixtureObjectTests.cs" />
     <Compile Include="AutoFixtureFreezeTests.cs" />
     <Compile Include="BuildingandassigningarrayswithAutoFixtureTests.cs" />
+    <Compile Include="CreatingGenericPopulatedListsTests.cs" />
     <Compile Include="CreatingSpecificPopulatedListsTests.cs" />
     <Compile Include="DealingWithConstrainedInputTests.cs" />
     <Compile Include="MoreAboutFrozenPizzaTests.cs" />
