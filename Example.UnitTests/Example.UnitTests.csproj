@@ -86,6 +86,8 @@
     <Compile Include="TestConventions\MyTestConventionsAttribute.cs" />
     <Compile Include="TestConventions\SetPropertyUsingBuildConvention.cs" />
     <Compile Include="TestConventions\SetPropertyUsingBuildConventionsAttribute.cs" />
+    <Compile Include="TestConventions\SpecificPopulatedListsTestConventions.cs" />
+    <Compile Include="TestConventions\SpecificPopulatedListsTestConventionsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
